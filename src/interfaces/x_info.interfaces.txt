@@ -1,0 +1,7 @@
+============
+    INFO
+============
+
+* Las interfaces no existen en tiempo de ejecución, solo en compilación.
+* Las interfaces te protegen en desarrollo, pero no en producción.
+* A veces hace falta los guards, no solo nos sirven las interfaces

@@ -1,0 +1,11 @@
+============
+    INFO
+============
+
+La carpeta commons contiene componentes reutilizables o lógica común que sí tiene noción del proyecto 
+(es decir son documenntos que solo sirven para este proyecto en cuestión y son dificiles de reutilizar
+e otros):
+
+    Características:
+    - Puede usar clases, middlewares, errores personalizados, etc.
+    - A menudo depende de librerías como Express o tu sistema de errores.

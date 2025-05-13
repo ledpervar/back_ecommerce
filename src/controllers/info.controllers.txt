@@ -1,0 +1,17 @@
+============
+    INFO
+============
+
+== getInfoUser.controller.ts:
+    Acceso a los datos. Para acceder a los datos desde un controlador, debemos distinguir la 
+    diferencia clave entre estos dos escenarios:
+
+    1)  Cuando el usuario accede a sus propios datos (ej. perfil propio):
+        El ID se extrae del token JWT (que se verifica en el middleware verifyToken)
+        Se almacena en res.locals.idUser
+        Ruta típica: /me/profile (no necesita parámetro de ID)
+    
+    2)  Cuando un administrador/gestor accede a datos de otro usuario:
+        El ID viene como parámetro en la URL (/users/:id)
+        Se valida que sea un número válido (middleware aparte)
+        No se usa el token para obtener el ID objetivo (solo para verificar permisos)

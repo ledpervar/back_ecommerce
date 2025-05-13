@@ -1,0 +1,10 @@
+============
+    INFO
+============
+
+La carpeta utils esta pensada para funciones reutilizables, sin contexto del negocio o proyecto que estamos desarrollando.
+Contiene funciones genéricas que pueden usarse en cualquier parte del proyecto.
+
+    Características:
+    - No dependen de Express, de la base de datos ni del dominio del negocio.
+    - Son helpers puros, fácilmente testeables.

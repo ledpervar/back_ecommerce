@@ -1,0 +1,24 @@
+============
+    INFO
+============
+
+¿Qué hace esto "index.d.ts"? 
+Le dice a TypeScript que dentro de res.locals, van a existir las propiedades:
+    - idUser: number
+    - role: role (tipo que ya definiste tú)
+Así, puedes acceder a res.locals.idUser y res.locals.role sin errores 
+
+
+PARA QUE LO ANTERIOR FUNCIONE HE TENIDO QUE HACER ESTO:
+=======================================================
+
+1|  Hemos tenido que añadir al tsconfig.json esto: 
+        "typeRoots": ["./src/types", "./node_modules/@types"]
+        "include": ["src"]
+
+2|  Además, después el authToken.middleware no reconocía el "res.locals.role = decodedToken.role", para solucionar esto he tenido que 
+    importar en ese documento: 
+    // Type import
+    import { role } from '../../common/constants/roles.const';
+
+3|  Y forzar el tipado de tal manera que se ha quedado así: "res.locals.role = decodedToken.role as role"

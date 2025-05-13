@@ -1,0 +1,8 @@
+============
+    INFO
+============
+
+OJOOOO!!!
+En Express, res.send() no detiene la función. Si no usamos return, el middleware sigue ejecutándose y 
+puede dar errores de respuesta duplicada. Por eso el uso de return es parte de la práctica profesional 
+y segura en middlewares. Segunda opcion: if-else if-else, esta feo y no es escalable.
